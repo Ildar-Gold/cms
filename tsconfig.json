@@ -13,7 +13,7 @@
       "jsx": "react",
       "baseUrl": ".",
       "paths": {
-        "@ildar-monorepo/*": ["packages/*/src", "libs/*/src", "apps/*/src"]
+        "@cms": ["packages/*/src", "libs/*/src", "apps/*/src"]
       }
     },
     "exclude": ["node_modules", "dist", "build"]

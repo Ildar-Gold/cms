@@ -1,25 +1,17 @@
 {
-  "name": "cms",
-  "version": "1.0.0",
+  "name": "web-app",
+  "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "apps/*",
-    "libs/*"
-  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "main": "index.js",
-  "repository": "https://github.com/Ildar-Gold/cms.git",
-  "author": "Ildar <Ildar>",
-  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
   "devDependencies": {
-    "@types/node": "^22.13.11",
-    "@typescript-eslint/eslint-plugin": "^8.27.0",
-    "@typescript-eslint/parser": "^8.27.0",
-    "eslint": "^9.22.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.3.9"
   }
 }

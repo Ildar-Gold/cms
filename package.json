@@ -1,25 +1,23 @@
 {
-  "name": "cms",
-  "version": "1.0.0",
-  "private": true,
-  "workspaces": [
-    "packages/*",
-    "apps/*",
-    "libs/*"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "main": "index.js",
-  "repository": "https://github.com/Ildar-Gold/cms.git",
-  "author": "Ildar <Ildar>",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^22.13.11",
-    "@typescript-eslint/eslint-plugin": "^8.27.0",
-    "@typescript-eslint/parser": "^8.27.0",
-    "eslint": "^9.22.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "name": "cms",
+    "private": true,
+    "workspaces": [
+      "packages/*",
+      "apps/*",
+      "libs/*"
+    ],
+    "scripts": {
+      "build": "yarn workspaces run build",
+      "build:utils": "yarn workspace @cms/utils build",
+      "build:ui": "yarn workspace @cms/ui-components build",
+      "build:web": "yarn workspace @cms/web-app build",
+      "clean": "rm -rf **/dist",
+      "start": "yarn workspace @cms/web-app start"
+    },
+    "devDependencies": {
+      "typescript": "^5.0.0",
+      "eslint": "^8.0.0",
+      "@typescript-eslint/parser": "^6.0.0",
+      "@typescript-eslint/eslint-plugin": "^6.0.0"
+    }
   }
-}

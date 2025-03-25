@@ -1,20 +1,8 @@
 {
-    "compilerOptions": {
-      "target": "es2018",
-      "module": "commonjs",
-      "declaration": true,
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "jsx": "react",
-      "baseUrl": ".",
-      "paths": {
-        "@ildar-monorepo/*": ["packages/*/src", "libs/*/src", "apps/*/src"]
-      }
-    },
-    "exclude": ["node_modules", "dist", "build"]
-  }
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"]
+}
